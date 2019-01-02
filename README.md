@@ -1,7 +1,7 @@
 # SplitVideo-Nim
 
-Simple script that splits video in smaller chunks using ffmpeg
+Simple script that splits video in smaller chunks using ffmpeg, size is writed down in bytes
 
-Usage:
- ./SplitVideo INPUT_FILE SIZE(bytes)
- ./SplitVideo test.mp4 5000000
+**Usage**: ./SplitVideo    test.mp4      5000000
+ 
+ 
