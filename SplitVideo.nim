@@ -52,8 +52,8 @@ while atmSeek<=wholeVideoDuration-1:
   
   #Split video
   let splitArgs : array[8,string] = ["-y","-i", name & ext, "-ss", $atmSeek, "-fs", $paramStr(2), n]
-  let pr3 = startProcess("ffmpeg","", splitArgs , nil, {poStdErrToStdOut,poUsePath})
-  pr3.close()
+  discard startProcess("ffmpeg","", splitArgs , nil, {poStdErrToStdOut,poUsePath}).outputStream.readAll();
+ 
   
   #Read duration of splited part to know where to continue next one
   getDurationArgs[1]= name & $atmChunk & ext
